@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage{amsmath}
+\usepackage{multirow}
 \usepackage{tfrupee}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \let\vec\mathbf
@@ -22,35 +23,61 @@
 P& = \rupee 20000\\
 Interest rate, I & = 12 \% \\
 Time between compounding, T& = 1 year\\
-\begin{align*}
+\begin{align}
 A& =  P \times (1+I/100)^T
-\end{align*}
+\end{align}
 Where value of I is in percent.\\
 \\
 Therefore, amount due at the end of one year is
-\begin{align*}
+\begin{align}
 A & = 20000 \times (1+12/100)^1 \\
 A & = \rupee 22400
-\end{align*}
+\end{align}
 Amount paid at the end of one year is \rupee 8400.\\
 Thus remaining amount,
-\begin{align*}
+\begin{align}
 A& = 22400-8400 \\
 A& = \rupee 14000
-\end{align*}
+\end{align}
 \noindent This new amount will now be the principal amount for the next year.\\
 Thus, amount due at the end of the second year is 
-\begin{align*}
+\begin{align}
 A& = 14000 \times (1+12/100)^1\\
 A& = \rupee 15680
-\end{align*}
+\end{align}
 Amount paid at the end of second year is \rupee 9680.\\
 Thus remaining amount,
-\begin{align*}
+\begin{align}
 A& = 15680-9680\\
 A& = \rupee 6000
-\end{align*}
+\end{align}
 Therefore, we know that he still has \rupee $6000$ to pay to the bank.\\
 
-$\implies$ Ranbir still owes to the bank \rupee $6000$ out of the \rupee $20,000$ he had borrowed, after the two annual payments.
+$\implies$ Ranbir still owes to the bank \rupee $6000$ out of the \rupee $20,000$ he had borrowed, after the two annual payments.\\
+\\
+
+\begin{tabular}{ ||p{3.5cm}|p{2cm}||  }
+ \hline
+ \hline
+ \multicolumn{2}{||c||}{\textbf{Input and Output}} \\
+ \hline
+ \hline
+ \textbf{Input}& \textbf{Value} \\
+ \hline
+ Principal Amount   & \rupee20,000\\
+ \hline
+ Interest Rate&   12 \%\\
+ \hline
+ Money repaid after first year &\rupee8400 \\
+ \hline
+ Money repaid after second year &\rupee9680\\
+ \hline
+ \textbf{Output}& \textbf{Value} \\
+ \hline
+ Amount still owed&   \rupee6000\\
+ \hline
+ \hline
+
+\end{tabular}
+
 \end{document}
