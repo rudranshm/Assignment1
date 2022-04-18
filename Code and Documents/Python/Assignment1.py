@@ -1,12 +1,17 @@
-interest=0.12 #Setting interest at 12 %
-dueamount=20000 # Setting original amount due as 20,000
+dueamount=int(input("Amount borrowed, in rupees : ")) #Taking input of principal amount in rupees
 
-dueamount=dueamount+dueamount*interest # Amount due at end of first year after adding interest
+interest=int(input("Interest at which amount is borrowed, in percent : ")) #Taking input of interest in %
 
-dueamount=dueamount - 8400 #First payment
+pay1=int(input("Amount paid at the end of the first year, in rupees : ")) #Taking input of principal amount in rupees
+              
+pay2=int(input("Amount paid at the end of the second year, in rupees : ")) #Taking input of principal amount in rupees             
+             
+dueamount=dueamount+((dueamount*interest)/100) # Amount due at end of first year after adding interest
 
-dueamount=dueamount+dueamount*interest # Amount due at end of second year, after making first payment and subsequently adding interest
+dueamount=dueamount - pay1 #First payment
 
-dueamount=dueamount - 9680 #Second payment
+dueamount=dueamount+ ((dueamount*interest)/100) # Amount due at end of second year, after making first payment and subsequently adding interest
+
+dueamount=dueamount - pay2 #Second payment
 
 print("The amount of loan outstanding at the end of year two is ", dueamount," rupees." )
